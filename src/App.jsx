@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Todos from './components/Todos';
+import TodoForm from './components/TodoForm';
 
 function App() {
   const [todos, setTodos] = useState([
@@ -38,7 +39,10 @@ return (
   <div style={styles.container}>
     <h1 style={styles.title}>My Todo List</h1>
     {/* Teruskan function toggleCompleted ke component Todos */}
-    <Todos todos={todos} toggleCompleted={toggleCompleted} />
+    <Todos 
+    todos={todos} 
+    toggleCompleted={toggleCompleted}
+    deleteTodo = {deleteTodo} />
   </div>
 )
 }
